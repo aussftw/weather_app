@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Form from "./Form";
 import Result from "./Result";
+import Forecast from "./Forecast";
 import Footer from "./Footer/Footer";
 import "./App.css";
 
@@ -20,7 +21,9 @@ class App extends Component {
       },
       windchill: null,
       visible: false,
-      forecast: []
+      forecast: {
+        list: ""
+      }
     };
   }
 
@@ -62,8 +65,17 @@ class App extends Component {
       `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`
     );
     const forecastResponse = await apiCallForecast.json();
+    // const oldForecatstList = forecastResponse.list;
+    // const required = [8, 16, 24, 32, 40];
+    // const forecastList = [];
+    // const oldForecatstListLength = oldForecatstList.length;
+    // for (var i = 0; i < oldForecatstListLength; i++) {
+    //   if (required.includes(i + 1)) {
+    //     forecastList.push(oldForecatstList[i]);
+    //   }
+    // }
 
-    this.setState({ forecast: forecastResponse.list });
+    this.setState({ forecast: { list: forecastResponse.list } });
 
     const windChillCalc = Math.round(
       15.12 +
@@ -72,7 +84,6 @@ class App extends Component {
         0.3965 * temp * Math.pow(wind, 0, 16)
     );
     this.setState({ windchill: windChillCalc });
-    console.log(this.state);
   };
 
   getCoordsWeather = async e => {
@@ -101,18 +112,16 @@ class App extends Component {
       `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`
     );
     const forecastResponse = await apiCallForecast.json();
-    const oldForecatstList = forecastResponse.list;
-    const required = [8, 16, 24, 32, 40];
-    const forecastList = [];
-    const oldForecatstListLength = oldForecatstList.length;
-    for (var i = 0; i < oldForecatstListLength; i++) {
-      if (required.includes(i + 1)) {
-        forecastList.push(oldForecatstList[i]);
-      }
-    }
-    console.log(forecastList);
-
-    this.setState({ forecast: forecastList });
+    // const oldForecatstList = forecastResponse.list;
+    // const required = [8, 16, 24, 32, 40];
+    // const forecastList = [];
+    // const oldForecatstListLength = oldForecatstList.length;
+    // for (var i = 0; i < oldForecatstListLength; i++) {
+    //   if (required.includes(i + 1)) {
+    //     forecastList.push(oldForecatstList[i]);
+    //   }
+    // }
+    this.setState({ forecast: { list: forecastResponse.list } });
 
     const windChillCalc = Math.round(
       15.12 +
@@ -121,7 +130,6 @@ class App extends Component {
         0.3965 * temp * Math.pow(wind, 0, 16)
     );
     this.setState({ windchill: windChillCalc });
-    console.log(this.state);
   };
 
   renderButton() {
@@ -134,13 +142,17 @@ class App extends Component {
         <Header />
         <Form loadInputWeather={this.getInputWeather} />
         {this.state.visible ? (
-          <Result
-            city={this.state.city}
-            item={this.state.actualWeather}
-            windchill={this.state.windchill}
-            forecast={this.state.forecast}
-          />
+          <div>
+            <Result
+              city={this.state.city}
+              item={this.state.actualWeather}
+              windchill={this.state.windchill}
+              forecastItems={this.state.forecast}
+            />
+            <Forecast item={this.state.forecast} />
+          </div>
         ) : null}
+
         {this.renderButton()}
         <Footer />
       </div>
