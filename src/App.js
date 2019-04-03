@@ -24,6 +24,9 @@ class App extends Component {
       visible: false,
       forecast: {
         list: []
+      },
+      cityBackground: {
+        img: ''
       }
     };
   }
@@ -80,12 +83,11 @@ class App extends Component {
 
     const windChillCalc = Math.round(
       15.12 +
-        0.6215 * temp -
-        11.37 * Math.pow(wind, 0.16) +
-        0.3965 * temp * Math.pow(wind, 0, 16)
+      0.6215 * temp -
+      11.37 * Math.pow(wind, 0.16) +
+      0.3965 * temp * Math.pow(wind, 0, 16)
     );
     this.setState({ windchill: windChillCalc });
-    console.log(this.state);
   };
 
   getCoordsWeather = async e => {
@@ -115,7 +117,7 @@ class App extends Component {
       `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`
     );
     const forecastResponse = await apiCallForecast.json();
-    console.log(forecastResponse);
+
     const oldForecatstList = forecastResponse.list;
     const required = [7, 15, 23, 31, 39];
     const forecastList = [];
@@ -126,16 +128,24 @@ class App extends Component {
       }
     }
     this.setState({ forecast: { list: forecastList } });
-
+    const UNSPLASH_API_KEY = "71a3d05390572a4b903a34bec999e8278afcb2ecfa59b7390cc5cc00e4b3ab02";
+    const unsplashCall = await fetch(`https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${this.state.city}&client_id=${UNSPLASH_API_KEY}`);
+    const unsplashResponse = await unsplashCall.json();
+    this.setState({
+      cityBackground: {
+        img: unsplashResponse.results[0].urls.regular
+      }
+    });
     const windChillCalc = Math.round(
       15.12 +
-        0.6215 * temp -
-        11.37 * Math.pow(wind, 0.16) +
-        0.3965 * temp * Math.pow(wind, 0, 16)
+      0.6215 * temp -
+      11.37 * Math.pow(wind, 0.16) +
+      0.3965 * temp * Math.pow(wind, 0, 16)
     );
     this.setState({ windchill: windChillCalc });
-    console.log(this.state);
+    console.log(this.state)
   };
+
 
   renderButton() {
     return <button onClick={this.getCoordsWeather}> Weather near me </button>;
