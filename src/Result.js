@@ -3,17 +3,33 @@ import React from "react";
 const Result = props => {
   const temp = Math.round(props.item.temp);
 
-  const renderForecast = props.forecastItems.list.map(list => (
-    <div>
-      <div key={list.dt_txt.uniqueId}>{list.dt_txt}</div>
-      <div key={list.main.temp.uniqueId}>{list.main.temp}C&deg;</div>
-      <div key={list.weather[0].description.uniqueId}>
-        {list.weather[0].description}
+  const renderForecast = props.forecastItems.list.map(function (list, index) {
+    return (
+      <div key={index}>
+        <div key={list.dt_txt}>
+          <p>{list.dt_txt}</p>
+        </div>
+        <div key={list.main.temp}>
+          <p>{list.main.temp} C&deg;</p>
+        </div>
+        <div key={list.weather[0].description}>
+          <p>{list.weather[0].description}</p>
+        </div>
+        <div key={list.wind.speed}>
+          <p>{list.wind.speed} KM/H</p>
+        </div>
+        <div key={list.main.humidity.uniqueId}>
+          <p>{list.main.humidity} %</p>
+        </div>
       </div>
-      <div key={list.wind.speed.uniqueId}>{list.wind.speed} KM/H</div>
-      <div key={list.main.humidity.uniqueId}>{list.main.humidity} %</div>
-    </div>
-  ));
+
+
+    )
+  })
+
+
+
+
 
   return (
     <div>
@@ -28,6 +44,6 @@ const Result = props => {
       <div>{renderForecast}</div>
     </div>
   );
-};
+}
 
 export default Result;
