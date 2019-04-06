@@ -26,7 +26,7 @@ class App extends Component {
         list: []
       },
       cityBackground: {
-        img: ''
+        img: ""
       }
     };
   }
@@ -81,6 +81,18 @@ class App extends Component {
     }
     this.setState({ forecast: { list: forecastList } });
 
+    const UNSPLASH_API_KEY =
+      "71a3d05390572a4b903a34bec999e8278afcb2ecfa59b7390cc5cc00e4b3ab02";
+    const unsplashCall = await fetch(
+      `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${city}&client_id=${UNSPLASH_API_KEY}`
+    );
+    const unsplashResponse = await unsplashCall.json();
+    this.setState({
+      cityBackground: {
+        img: unsplashResponse.results[0].urls.regular
+      }
+    });
+
     const windChillCalc = Math.round(
       15.12 +
       0.6215 * temp -
@@ -88,6 +100,7 @@ class App extends Component {
       0.3965 * temp * Math.pow(wind, 0, 16)
     );
     this.setState({ windchill: windChillCalc });
+    console.log(this.state);
   };
 
   getCoordsWeather = async e => {
@@ -95,11 +108,12 @@ class App extends Component {
     const API_KEY = "d4502d305d879beb12e6f13ebb40722d";
     const lat = this.state.lat;
     const long = this.state.long;
+    const city = this.state.city;
     const temp = Math.round(this.state.actualWeather.temp);
     const wind = Math.round(this.state.actualWeather.wind);
 
     const apiCall = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&q=${city}&units=metric&appid=${API_KEY}`
     );
     const response = await apiCall.json();
     this.setState({
@@ -113,9 +127,7 @@ class App extends Component {
       },
       visible: true
     });
-    const apiCallForecast = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`
-    );
+    const apiCallForecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`);
     const forecastResponse = await apiCallForecast.json();
 
     const oldForecatstList = forecastResponse.list;
@@ -128,7 +140,9 @@ class App extends Component {
       }
     }
     this.setState({ forecast: { list: forecastList } });
-    const UNSPLASH_API_KEY = "71a3d05390572a4b903a34bec999e8278afcb2ecfa59b7390cc5cc00e4b3ab02";
+
+    const UNSPLASH_API_KEY =
+      "71a3d05390572a4b903a34bec999e8278afcb2ecfa59b7390cc5cc00e4b3ab02";
     const unsplashCall = await fetch(`https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${this.state.city}&client_id=${UNSPLASH_API_KEY}`);
     const unsplashResponse = await unsplashCall.json();
     this.setState({
@@ -136,6 +150,7 @@ class App extends Component {
         img: unsplashResponse.results[0].urls.regular
       }
     });
+
     const windChillCalc = Math.round(
       15.12 +
       0.6215 * temp -
@@ -143,9 +158,9 @@ class App extends Component {
       0.3965 * temp * Math.pow(wind, 0, 16)
     );
     this.setState({ windchill: windChillCalc });
-    console.log(this.state)
-  };
 
+    console.log(this.state.forecast);
+  };
 
   renderButton() {
     return <button onClick={this.getCoordsWeather}> Weather near me </button>;
