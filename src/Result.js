@@ -22,17 +22,11 @@ const Result = props => {
           <p>{list.main.humidity} %</p>
         </div>
       </div>
-
-
     )
   })
 
-
-
-
-
   return (
-    <div>
+    <div className="actual-weather-wrapper" style={{ backgroundImage: `url(${(props.img.img)})` }}>
       <h1>{props.city}</h1>
       <p>{props.item.desc}</p>
       <h3>{temp}&deg; C</h3>
