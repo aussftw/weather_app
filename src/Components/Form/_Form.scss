@@ -1,0 +1,20 @@
+.search-wrapper {
+  display: inline-block;
+  justify-content: center;
+  position: fixed;
+  top: 40%;
+  margin: 1rem;
+  input {
+    width: 95%;
+    margin: 0.2rem;
+  }
+  button{
+    margin-left: 3rem;
+  }
+}
+
+.toggle {
+  position: fixed;
+  top: 0%;
+}
+

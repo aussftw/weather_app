@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import Form from "./Form";
+import Header from "./Components/Header/Header";
+import Form from "./Components/Form/Form";
 import Result from "./Result";
-import Footer from "./Footer/Footer";
-import "./App.css";
+import Footer from "./Components/Footer/Footer";
+import style from "./style.scss"
 
 class App extends Component {
   constructor() {
@@ -158,20 +158,24 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Header />
-        <Form loadInputWeather={this.getInputWeather} />
-        {this.state.visible ? (
-          <div>
-            <Result
-              city={this.state.city}
-              item={this.state.actualWeather}
-              windchill={this.state.windchill}
-              img={this.state.cityBackground}
-              forecastItems={this.state.forecast}
-            />
+        <div className="main">
+          <Header />
+          <div className="search-wrapper">
+            <Form loadInputWeather={this.getInputWeather} visible={this.state.visible} />
+            <div className={`coords-button ${this.state.visible === true ? '' : 'toggle'}`}>
+              {this.renderButton()}
+            </div>
           </div>
-        ) : null}
-        {this.renderButton()}
+        </div>
+        <div className={`results-wrapper ${this.state.visible === true ? '' : 'hidden'}`}>
+          <Result
+            city={this.state.city}
+            item={this.state.actualWeather}
+            windchill={this.state.windchill}
+            img={this.state.cityBackground}
+            forecastItems={this.state.forecast}
+          />
+        </div>
         <Footer />
       </div>
     );
