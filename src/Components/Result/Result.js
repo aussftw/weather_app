@@ -6,20 +6,20 @@ const Result = props => {
 
   const renderForecast = props.forecastItems.list.map(function (list, index) {
     return (
-      <div key={index}>
-        <div key={list.dt_txt}>
+      <div className="forecast-item" key={index}>
+        <div className="date" key={list.dt_txt}>
           <p>{list.dt_txt}</p>
         </div>
-        <div key={list.main.temp}>
+        <div className="forecast-temp" key={list.main.temp}>
           <p>Temperature:{list.main.temp} C&deg;</p>
         </div>
-        <div key={list.weather[0].description}>
+        <div className="forecast-desc" key={list.weather[0].description}>
           <p>{list.weather[0].description}</p>
         </div>
-        <div key={list.wind.speed}>
-          <p>Windspeed: {list.wind.speed} KM/H</p>
+        <div className="forecast-wind" key={list.wind.speed}>
+          <p>Windspeed: {list.wind.speed} KM/H </p>
         </div>
-        <div key={list.main.humidity.uniqueId}>
+        <div className="forecast-humidity" key={list.main.humidity.uniqueId}>
           <p>humidity: {list.main.humidity} %</p>
         </div>
       </div>
@@ -27,15 +27,17 @@ const Result = props => {
   })
 
   return (
-    <div className="actual-weather-wrapper" style={{ backgroundImage: `url(${(props.img.img)})` }}>
-      <h1>{props.city}</h1>
-      <p className="description">{props.item.desc}</p>
-      <h3 className="temp">{temp}&deg; C</h3>
-      <p className="wind">Wind: {props.item.wind} KM/H</p>
-      < h3 className="windchill">Feels like {props.windchill}&deg; C</h3>
-      <p className="pressure">Hressure {props.item.press} Pa</p>
-      <p className="humidity">Humidity {props.item.humidity} %</p>
-      <div className="next-hours-wrapper">
+    <div>
+      <div className="actual-weather-wrapper" style={{ backgroundImage: `url(${(props.img.img)})` }}>
+        <h1>{props.city}</h1>
+        <p className="description">{props.item.desc}</p>
+        <h3 className="temp">{temp}&deg; C</h3>
+        <p className="wind">Wind: {props.item.wind} KM/H</p>
+        <h3 className="windchill">Feels like {props.windchill}&deg; C</h3>
+        <p className="pressure">Pressure {props.item.press} Pa</p>
+        <p className="humidity">Humidity {props.item.humidity} %</p>
+      </div>
+      <div className="forecast-wrapper">
         <h2>Near future</h2>
         {renderForecast}
       </div>

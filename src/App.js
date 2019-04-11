@@ -160,7 +160,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="search-wrapper">
+        <div>
           <Form loadInputWeather={this.getInputWeather} visible={this.state.visible} />
           <div >
             {this.renderButton()}

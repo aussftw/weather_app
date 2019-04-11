@@ -22,7 +22,7 @@ h2 {
   color: white;
   font-size: 22px;
  
-  padding: 20px 0;
+  
   width: 100%;
 }
 
@@ -54,4 +54,6 @@ h2 {
   right: 22%;
   font-size: 0.8rem;
   height: 2.3rem;
+  color: white;
+  font-weight: bold;
 }
