@@ -1,12 +1,16 @@
 import React from "react";
+import "./Form.css"
 
 const Form = props => {
   return (
-    <div className={`search-wrapper${props.visible === true ? 'toggle' : ''}`}>
-      <form onSubmit={props.loadInputWeather}>
-        <input type="text" name="city" placeholder="Enter city" required />
-        <button>Get weather</button>
-      </form>
+    <div className={`search-wrapper ${props.visible === true ? 'toggle' : ''}`}>
+      <div className="search-form-wrapper">
+        <p className="p-header">Look at weather at any city</p>
+        <form onSubmit={props.loadInputWeather} className="search-form">
+          <input type="text" name="city" placeholder="Enter city" className="input-data" required />
+          <button className="input-button">Get weather</button>
+        </form>
+      </div>
     </div>
   );
 };

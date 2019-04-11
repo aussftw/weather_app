@@ -1,0 +1,152 @@
+.results-wrapper {
+  @media (min-width: 500px) {
+      display: flex;
+  }
+}
+
+.actual-weather-wrapper {
+  height: 50vh;
+  min-height: 500px;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: 500px) {
+      height: 100vh;
+      width: 50%;
+  }
+
+
+  .temp {
+      font-size: 82px;
+
+      padding: 7px 0;
+
+      @media (min-width: 500px) {
+          padding: 15px 0;
+      }
+  }
+
+  .description {
+      font-size: 22px;
+      line-height: 24px;
+     
+      padding: 7px 0;
+
+      &:first-letter {
+          text-transform: uppercase;
+      }
+
+      @media (min-width: 500px) {
+          font-size: 36px;
+      }
+  }
+
+  .wind,
+  .pressure {
+      font-size: 16px;
+     
+      padding: 3px 0;
+
+      @media (min-width: 500px) {
+          font-size: 26px;
+          padding: 7px 0;
+      }
+  }
+}
+
+.next-hours-wrapper {
+  height: 100%;
+  background-color: grey;
+  padding: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: 300px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  @media (min-width: 500px) {
+      height: 100vh;
+      width: 50%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+  }
+
+  .hour-wrapper {
+      display: flex;
+      color: white;
+      margin: 5px -20px;
+      padding: 10px 20px;
+      background-color: grey;
+      
+      align-items: center;
+      width: 100%;
+
+      @media (min-width: 400px) {
+          width: calc(50% - 60px);
+          margin: 10px;
+      }
+
+      @media (min-width: 500px) {
+          width: calc(100% - 40px);
+          margin: 10px 0;
+      }
+
+      .temp {
+          width: 35%;
+          font-size: 30px;
+      }
+
+      .detail-wrapper {
+          width: 65%;
+
+          .date,
+          .wind,
+          .pressure {
+              font-size: 16px;
+              padding: 5px 0;
+          }
+
+          .date {
+              position: relative;
+              padding-left: 30px;
+
+              &:before {
+                  content: '';
+                  width: 43px;
+                  height: 25px;
+                 
+                  top: 0;
+                  left: -10px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  position: absolute;
+              }
+          }
+
+          .description {
+              font-size: 16px;
+              padding: 5px 0;
+
+              @media (min-width: 300px) {
+                  font-size: 22px;
+              }
+
+              &:first-letter {
+                  text-transform: uppercase;
+              }
+          }
+      }
+  }
+}
