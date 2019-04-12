@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 20px;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -73,8 +73,11 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-    "date forecast-temp forecast-wind forecast-humidity forecast-desc"
-    
+    "date forecast-temp forecast-wind forecast-humidity "
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+     */
     
   }
 
@@ -85,9 +88,17 @@
   .forecast-humidity {
     margin: 0.2rem;
     font-size: 1rem;
+    text-align: center
   }
 
   .forecast-wind {
     font-size: 1rem;
-    text-align: center
+    text-align: center;
+    padding-top:0.2rem;
+    
+  }
+
+  .date {
+    margin-top: 1.5rem;
+    margin-left: -0.2rem; 
   }
