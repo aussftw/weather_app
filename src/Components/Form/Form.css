@@ -17,21 +17,26 @@
 
   .p-header {
     font-size: 1.5rem;
-    line-height: 0.5rem;
-    padding: 20px 0;
+    font-weight: bold;
+    padding: 1rem 0;
     text-align: center;
     margin: 0.2rem;
+    position: fixed;
+    top: 40%;
+    left: 10%;
   }
 
 
   .input-data {
-    width: 58%;
+    width: 53.3%;
     border: 0;
     height: 4rem;
     font-size: 1.5rem;
     padding: 1.4rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
     box-sizing: border-box;
+    position: fixed;
+    top: 47%;
    
   }
 
@@ -44,12 +49,17 @@
     color: white;
     position: fixed;
     left: 58%;
+    top: 47%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
     font-size: 1rem;
     }
 
     .input::placeholder {
       color: white;
+    }
+    
+    i {
+      font-size: 2rem;
     }
 
     input:focus {
@@ -70,18 +80,17 @@
     top: 0;
     padding: 0;
     margin: 0;
-   
-    
   }
 
   .toggle * .p-header {
     position: fixed;
     top: 0;
-    left: 10%;
+    left: 12%;
     font-size: 1.4rem;
     padding: 0;
     text-align: center;
-    margin-top: 1.5rem;
+    
+    padding: 1rem;
     color: white;
     font-weight: bold;
   }  

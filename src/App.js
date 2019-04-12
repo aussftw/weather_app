@@ -153,7 +153,7 @@ class App extends Component {
 
   renderButton() {
     return (
-      <div className={`coords-button ${this.state.visible === true ? 'toggler' : ''}`} onClick={this.getCoordsWeather}> Weather near me </div>
+      <div className={`coords-button ${this.state.visible === true ? 'toggler' : ''}`} onClick={this.getCoordsWeather}> <i className="large location arrow icon" /> </div>
     )
   }
 

@@ -8,7 +8,7 @@ const Form = props => {
         <p className="p-header">Look at weather at any city</p>
         <form onSubmit={props.loadInputWeather} className="search-form">
           <input type="text" name="city" placeholder="Enter city" className="input-data" required />
-          <button className="input-button">Get weather</button>
+          <button className="input-button"><i className="large search icon" /></button>
         </form>
       </div>
     </div>
@@ -16,3 +16,5 @@ const Form = props => {
 };
 
 export default Form;
+
+

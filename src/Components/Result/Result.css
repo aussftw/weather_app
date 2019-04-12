@@ -1,10 +1,10 @@
-.results-wrapper {
+/* .results-wrapper {
 
-}
+} */
 
 .actual-weather-wrapper {
   height: 50vh;
-  min-height: 460px;
+  min-height: 400px;
   width: 100%;
   color: white;
   background-position: center;
@@ -47,31 +47,47 @@
   
 
   h2 {
-    margin: 0;
-    padding: 0.5rem;
+    margin: 0.5rem 0;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: white;
   }
 
-  .forecast-wrapper  {
-  
-  }
+  /* .forecast-wrapper  {
+    height: 100%;
+    background-color: grey;
+    
+  } */
 
   p {
     margin: 0;
   }
   .forecast-item {
-    display: flex;
+    box-sizing: border-box;
     color: white;
-    background-color: grey;
-    align-items: center;
-    width: 100%;
-    border: 1px solid black;
+    background-color: goldenrod;
+    display: flex;
+    margin: 0.3rem 1rem;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "date forecast-temp forecast-wind forecast-humidity forecast-desc"
+    
+    
   }
 
   .date,
   .forecast-temp,
   .forecast-desc,
-  .forecast-wind,
+  
   .forecast-humidity {
     margin: 0.2rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .forecast-wind {
+    font-size: 1rem;
+    text-align: center
   }

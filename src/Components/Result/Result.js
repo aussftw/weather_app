@@ -11,18 +11,19 @@ const Result = props => {
           <p>{list.dt_txt}</p>
         </div>
         <div className="forecast-temp" key={list.main.temp}>
-          <p>Temperature:{list.main.temp} C&deg;</p>
+          <p><i className="thermometer half icon" />{list.main.temp.toFixed()}&deg;C</p>
         </div>
         <div className="forecast-desc" key={list.weather[0].description}>
           <p>{list.weather[0].description}</p>
         </div>
         <div className="forecast-wind" key={list.wind.speed}>
-          <p>Windspeed: {list.wind.speed} KM/H </p>
+          <p><i className="angle double right icon" />{list.wind.speed.toFixed()} KM/H </p>
         </div>
-        <div className="forecast-humidity" key={list.main.humidity.uniqueId}>
-          <p>humidity: {list.main.humidity} %</p>
+        <div className="forecast-humidity" key={list.main.humidity}>
+          <p><i className="angle double right icon" />{list.main.humidity} %</p>
         </div>
       </div>
+
     )
   })
 
@@ -37,10 +38,10 @@ const Result = props => {
         <p className="pressure">Pressure: {props.item.press} Pa</p>
         <p className="humidity">Humidity: {props.item.humidity} %</p>
       </div>
-      <div className="forecast-wrapper">
-        <h2>Near future</h2>
-        {renderForecast}
-      </div>
+
+      <h2>Near future</h2>
+      {renderForecast}
+
     </div>
   );
 }
