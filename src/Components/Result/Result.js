@@ -29,13 +29,13 @@ const Result = props => {
   return (
     <div>
       <div className="actual-weather-wrapper" style={{ backgroundImage: `url(${(props.img.img)})` }}>
-        <h1>{props.city}</h1>
-        <p className="description">{props.item.desc}</p>
+        <h1 className="city">{props.city}</h1>
         <h3 className="temp">{temp}&deg; C</h3>
+        <p className="description">{props.item.desc}</p>
         <p className="wind">Wind: {props.item.wind} KM/H</p>
         <h3 className="windchill">Feels like {props.windchill}&deg; C</h3>
-        <p className="pressure">Pressure {props.item.press} Pa</p>
-        <p className="humidity">Humidity {props.item.humidity} %</p>
+        <p className="pressure">Pressure: {props.item.press} Pa</p>
+        <p className="humidity">Humidity: {props.item.humidity} %</p>
       </div>
       <div className="forecast-wrapper">
         <h2>Near future</h2>

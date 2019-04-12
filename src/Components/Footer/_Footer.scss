@@ -2,8 +2,6 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 1.2rem;
-  padding-bottom: 0.5rem;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -11,22 +9,22 @@
 
 .footer-text {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 0.2rem;
   color: #e75559;
   margin-top: 0.5rem;
   padding: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.1rem;
 
 }
 .brown {
   display: inline;
   color: #bb3737;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 0.5rem;
 }
 .footer-text-extented {
   margin-top: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 0.3rem;
 }
 
 .socials {
@@ -39,23 +37,24 @@ i {
 
 @media screen and (max-width: 375px) and (max-height: 812px) {
   .footer-container {
-    padding: 0.6rem;
     
   }
   .footer-text {
-    height: 3rem;
-    font-size: 1rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
     margin-top: 0.1rem;
-    padding: 0.2rem;
+    padding: 0.1rem;
+    font-weight: bold;
 
-    font-weight: 100;
+    
   }
   .brown {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .footer-text-extented {
     margin-top: 0.15rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
   }
 }
 

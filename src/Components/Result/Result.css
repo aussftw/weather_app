@@ -4,7 +4,7 @@
 
 .actual-weather-wrapper {
   height: 50vh;
-  min-height: 440px;
+  min-height: 460px;
   width: 100%;
   color: white;
   background-position: center;
@@ -18,69 +18,60 @@
   box-sizing: border-box;
 }
 
-  h1 {
-    font-size: 2rem;
+  .city {
+    font-size: 1.5rem;
   }   
 
   .temp {
-      font-size: 1rem;
-      color: white;
-      font-weight: bold;
-      padding: 2px 0; 
-      margin: 0;    
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 0.2rem;    
   }
 
   .description {
-      font-size: 1rem;
-      line-height: 24px;
-      padding: 7px 0;
-      margin: 0; 
+    font-size: 1rem;
+    margin: 0.1rem; 
   }
 
   .wind,
   .pressure,
   .humidity {
-      font-size: 1rem;
-      padding: 2px 0;
-      margin: 0;
+    font-size: 1rem;
+    margin: 0.1rem;
   }
 
-  .widnchill {
+  .widnchill, h3 {
     margin: 0;
   }
   
 
   h2 {
     margin: 0;
-    padding: 0;
+    padding: 0.5rem;
   }
 
-.forecast-wrapper  {
-  height: 80%;
+  .forecast-wrapper  {
   
-  
-  box-sizing: border-box;
+  }
 
-}
-
+  p {
+    margin: 0;
+  }
   .forecast-item {
-      display: flex;
-      color: white;
-      background-color: grey;
-      align-items: center;
-      width: 100%;
+    display: flex;
+    color: white;
+    background-color: grey;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
   }
 
-  
-
-          .date,
-          .forecast-temp,
-          .forecast-desc,
-          .forecast-wind,
-          .forecast-humidity {
-            margin: 0;
-            padding: 1px;
-            font-size: 0.8rem;
-
-          
-          }
+  .date,
+  .forecast-temp,
+  .forecast-desc,
+  .forecast-wind,
+  .forecast-humidity {
+    margin: 0.2rem;
+    font-size: 0.8rem;
+  }
