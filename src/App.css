@@ -1,5 +1,3 @@
-
-
 body {
   width: 100%;
   height: 100%;
@@ -18,14 +16,6 @@ h1 {
   color: white;
 }
 
-/* .large.location.arrow {
-  position: fixed;
-  top: 7%;
-  right: 15%;
-  font-size: 1.3rem;
-  color: black
-} */
-
 .coords-button  {
   width: 4.4rem;
   height: 4rem;
@@ -33,14 +23,13 @@ h1 {
   border: 0;
   color: white;
   position: fixed;
-  top: 47%;
-  left: 75.2%;
+  top: 49.2%;
+  left: 80.2%;
   text-align: center;
   line-height: 3.6rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
   cursor: pointer;
   font-size: 1rem;
-  
 }
   
 .toggler {
@@ -49,11 +38,11 @@ h1 {
   background: transparent;
   position: fixed;
   top: 0%;
-  right: 20%;  
+  
   height: 3rem;
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  line-height: 2.9rem;
-  font-size: 0.9rem;
+  line-height: 3.1rem;
+  font-size: 0.8rem;
 }

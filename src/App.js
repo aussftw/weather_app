@@ -166,7 +166,7 @@ class App extends Component {
             {this.renderButton()}
           </div>
         </div>
-        <div className={`results-wrapper ${this.state.visible === true ? '' : 'hidden'}`}>
+        <div className={` ${this.state.visible === true ? '' : 'hidden'}`}>
           <Result
             city={this.state.city}
             item={this.state.actualWeather}

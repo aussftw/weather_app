@@ -13,7 +13,7 @@ const Footer = () => {
             </a>
             <a
               className="btn"
-              href="https://www.linkedin.com/in/alexander-k-7a7a32165/"
+              href="https://www.linkedin.com/in/alexander-kaminskiy/"
             >
               <i className="large linkedin icon" />
             </a>
