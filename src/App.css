@@ -51,6 +51,21 @@ h1 {
 }
 
 @media (min-width: 400px) {
+  .coords-button {
+    left: 82%
+  }
+}
+
+@media (max-height: 667px) {
+  .coords-button {
+    top: 49.1%
+  }
+  .toggler {
+  top: 0%  
+  }
+
   
+
+ 
 }
 

@@ -127,3 +127,38 @@
       font-size: 0.95rem;
     }
   }
+
+  @media (max-height: 667px) {
+    .actual-weather-wrapper {
+      min-height: 360px;
+    }
+    
+    h2 {
+      margin: 0.7rem 0;
+      margin-left: 1.1rem;
+      font-size: 1.2rem;
+    }
+
+    .forecast-item {
+      height: 3rem;
+    }
+
+    br {
+      display: none;
+    }
+
+    .date,
+    .forecast-temp,
+    .forecast-desc,
+    .forecast-wind,
+    .forecast-humidity {
+      font-size: 0.8rem;
+    }
+
+    .date {
+      margin-top: 0;
+      margin-left: -0.2rem; 
+    }
+  }
+
+ 
