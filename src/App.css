@@ -5,10 +5,14 @@ body {
   background: grey;
   color: black;
 }
+
+* {
+  box-sizing:  border-box;
+}
+
 .hidden {
   display: none !important;
 }
-
 
 h1 {
   font-size: 1.3rem;
@@ -24,7 +28,7 @@ h1 {
   color: white;
   position: fixed;
   top: 49.2%;
-  left: 80.2%;
+  left: 79.6%;
   text-align: center;
   line-height: 3.6rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
@@ -38,7 +42,6 @@ h1 {
   background: transparent;
   position: fixed;
   top: 0%;
-  
   height: 3rem;
   color: white;
   font-size: 1rem;
@@ -46,3 +49,8 @@ h1 {
   line-height: 3.1rem;
   font-size: 0.8rem;
 }
+
+@media (min-width: 400px) {
+  
+}
+

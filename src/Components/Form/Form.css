@@ -25,10 +25,8 @@
     width: 64.5%;
     border: 0;
     height: 4rem;
-    font-size: 1.rem;
     padding: 1.4rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
-    box-sizing: border-box;
   }
 
   .input-button {
@@ -102,7 +100,12 @@
     font-weight: bold;
   }
 
-  @media only screen and (min-width: 414px) and (max-height: 667px) {
-
-
-  }  
+  @media (min-width: 400px) {
+    .input-data {
+      width: 65.78%
+    }
+    .p-header {
+      padding-bottom: 0.6rem;
+      padding-left: 0.1
+    }
+  }
