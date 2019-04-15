@@ -58,14 +58,24 @@ h1 {
 
 @media (max-height: 667px) {
   .coords-button {
-    top: 49.1%
+    top: 49%;
   }
   .toggler {
-  top: 0%  
+    top: 0%
+  }
+}
+
+@media (max-width: 360px) and (max-height: 640px) {
+  .coords-button {
+    left: 77%;
   }
 
-  
-
- 
+  .toggler {
+    height: 2.3rem;
+    width: 2.8rem;
+    left: 83.9%;
+    line-height: 2.5rem;
+    margin-top: 3.05rem;
+  }
 }
 

@@ -42,6 +42,7 @@
 
   .input::placeholder {
     color: white;
+    background-color: transparent;
   }
   
   i {
@@ -108,4 +109,27 @@
       padding-bottom: 0.6rem;
       padding-left: 0.1
     }
+  }
+
+  @media (max-width: 360px) and (max-height: 640px) {
+    .input-data {
+      width: 58.2%;
+    }
+
+    .toggle * .p-header {
+      margin-top: 2.8rem;
+      font-size: 1.2rem;
+    }
+
+    .toggle *.input-data {
+      height: 2.3rem;
+      width: 73.5%; 
+    }
+
+    .toggle * .input-button {
+      height: 2.3rem;
+      width: 2.8rem;
+    }
+
+
   }
