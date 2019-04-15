@@ -213,10 +213,44 @@
 
     .date {
       margin-top: -0.3rem;
+    }    
+  }
+
+  @media (min-width: 768px) and (min-height: 1024px) {
+    .actual-weather-wrapper {
+      height: 55vh;
+      padding: 2rem;
+    }
+    
+    .city, .temp {
+      font-size: 3rem;
+    }  
+
+    .wind,
+    .pressure,
+    .humidity,
+    .description  {
+      font-size: 1.3rem;
     }
 
+    h2 {
+      margin: 1.5rem 0;
+      margin-left: 2rem;
+      font-size: 1.5rem;
+    }
 
-    
+    .forecast-item {
+      margin: 0.3rem 2rem;
+    }
+
+    .date,
+    .forecast-temp,
+    .forecast-desc,
+    .forecast-wind,
+    .forecast-humidity {
+      font-size: 1.2rem;
+    }
+
   }
 
  
