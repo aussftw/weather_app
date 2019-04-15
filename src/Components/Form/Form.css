@@ -173,7 +173,7 @@
   }
 }
 
-@media (min-width: 1650px) and (min-height: 1050px) {
+@media (min-width: 900px) and (min-height: 900px) {
   .search-form-wrapper {
     padding: 20rem;
   }
@@ -183,12 +183,19 @@
     width: 88.8%;
   }
 
+  .p-header {
+    font-size: 2rem;
+  }
+
+  .input-button {
+    height: 5.1rem;
+    width: 5.1rem;
+  }
+
 
   .toggle * .p-header {
     margin-top: 2rem;
   }
-
-  
 
   .toggle * .input-button {
     height: 4rem;

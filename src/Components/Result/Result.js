@@ -38,9 +38,10 @@ const Result = props => {
         <p className="pressure">Pressure: {props.item.press} Pa</p>
         <p className="humidity">Humidity: {props.item.humidity} %</p>
       </div>
-
-      <h2>Near future</h2>
-      {renderForecast}
+      <div className="forecast">
+        <h2>Near future</h2>
+        {renderForecast}
+      </div>
 
     </div>
   );
