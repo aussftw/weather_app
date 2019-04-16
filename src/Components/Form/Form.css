@@ -61,8 +61,6 @@
     height: 3rem;
     position: fixed;
     top: 0;
-    background-color: transparent;
-    color: black;
   }
 
   .toggle * .p-header {
@@ -175,12 +173,12 @@
 
 @media (min-width: 900px) and (min-height: 900px) {
   .search-form-wrapper {
-    padding: 20rem;
+    padding: 5rem;
   }
 
   .input-data {
     height: 5rem;
-    width: 88.8%;
+    width: 75.5%;
   }
 
   .p-header {
@@ -192,13 +190,86 @@
     width: 5.1rem;
   }
 
+  .toggle * .search-form-wrapper {
+    height: 3rem;
+    position: fixed;
+    top: 0;
+  }
+
 
   .toggle * .p-header {
     margin-top: 2rem;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .toggle * .input-data {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 32%;
+    margin: 3rem;
+    margin-top: 4rem;
+  }
+
+  .toggle * .input-button {
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    top: 0%;
+    left: 36.6%;
+    margin-top: 4rem;
+  }
+}  
+
+@media (min-width: 1600px) and (min-height: 1050px) {
+  .input-data {
+    width: 90.5%;
+  }
+
+  .p-header {
+    font-size: 2rem;
+  }
+
+  .input-button {
+    height: 5.1rem;
+    width: 5.1rem;
+  }
+
+  .toggle * .search-form-wrapper {
+    height: 3rem;
+    position: fixed;
+    top: 0;
+  }
+
+
+  .toggle * .p-header {
+    margin-top: 2rem;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .toggle * .input-data {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 38%;
+    margin: 3rem;
+    margin-top: 5rem;
   }
 
   .toggle * .input-button {
     height: 4rem;
     width: 4rem;
+    position: fixed;
+    top: 0%;
+    left: 40.2%;
+    margin-top: 5rem;
   }
-}  
+}

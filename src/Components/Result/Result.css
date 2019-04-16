@@ -257,7 +257,8 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 5rem;
+    padding: 2rem;
+    padding-bottom: 1rem;
     margin: 0;
     box-sizing: border-box;
     }
@@ -314,8 +315,8 @@
     .forecast-desc,
     .forecast-wind,
     .forecast-humidity {
-     
-      margin: 0.3rem;
+      
+      margin: 0.5rem;
       margin-left: 0;
       font-size: 1rem;
       text-align: start;
@@ -325,13 +326,13 @@
   
     .forecast-wind {
       padding-top: 0rem;
-      margin-left: 0.1rem; 
+      margin-left: 0.3rem; 
       margin-top: 0rem;
     }
   
     .date {
       margin-top: 0rem;
-      margin-left: 0.3rem; 
+      margin-left: 0.5rem; 
     }
   
     .forecast-temp,
@@ -340,9 +341,12 @@
     }
 
     .forecast-humidity {
-      margin-left: 0.1rem;
+      margin-left: 0.3rem;
     }
     
+    .forecast-temp {
+      margin-left: 0.2rem;
+    }
    
 
   }
