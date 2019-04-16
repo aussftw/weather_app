@@ -40,6 +40,7 @@
   
   h2 {
     margin: 1rem 0;
+    padding-top: 1rem;
     margin-left: 1rem;
     font-size: 1.3rem;
     color: white;
@@ -105,6 +106,7 @@
 
     h2 {
       margin: 0.8rem 0;
+      padding-top: 0.8rem;
       margin-left: 1rem;
       font-size: 1.2rem;
     }
@@ -129,6 +131,7 @@
     
     h2 {
       margin: 0.7rem 0;
+      padding-top: 0.7rem;
       margin-left: 1.1rem;
       font-size: 1.2rem;
     }
@@ -250,9 +253,6 @@
     height: 100vh;
     width: 50vw;
     color: white;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -299,9 +299,10 @@
       margin: 2rem;
       padding: 0.5rem;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       flex-direction: column;
-      height: 10rem;
+      height: 8rem;
+      
     }
 
     br {
@@ -313,18 +314,24 @@
     .forecast-desc,
     .forecast-wind,
     .forecast-humidity {
-      margin: 1rem;
-      font-size: 1.5rem;
-      text-align: center
+     
+      margin: 0.3rem;
+      margin-left: 0;
+      font-size: 1rem;
+      text-align: start;
+      justify-content: center;
+      line-height: 1rem;
     }
   
     .forecast-wind {
       padding-top: 0rem;
+      margin-left: 0.1rem; 
+      margin-top: 0rem;
     }
   
     .date {
       margin-top: 0rem;
-      margin-left: 0rem; 
+      margin-left: 0.3rem; 
     }
   
     .forecast-temp,
@@ -332,6 +339,11 @@
       margin-top: 0rem;
     }
 
+    .forecast-humidity {
+      margin-left: 0.1rem;
+    }
+    
+   
 
   }
 

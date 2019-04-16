@@ -82,5 +82,24 @@
       font-size: 1rem;
       margin: 0.5rem;
     }
-
   } 
+
+  @media (min-width: 900px) and (min-height: 900px) {
+    .footer-container {
+      justify-content: flex-end;
+      text-align: center;
+     
+    }
+    .footer-text {
+      font-size: 1.1rem;
+      margin-right: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    i.large.github.icon::before, i.large.linkedin.icon::before {
+      font-size: 1.2rem;
+      margin-left: 0rem;
+      
+
+  }
+  }
