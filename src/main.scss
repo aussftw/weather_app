@@ -1,47 +1,141 @@
-.hidden {
-  display: none !important;
-}
-
 body {
   width: 100%;
   height: 100%;
   font-size: 16px;
-  background: grey;
-  color: black;
+  background: $dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
 }
 
 h1 {
   font-size: 1.3rem;
   margin: 0;
-  color: white;
-}
-
-h2 {
-  color: white;
-  font-size: 22px;
- 
-  padding: 20px 0;
-  width: 100%;
+  color: $white;
 }
 
 .coords-button {
-  width: 70px;
-  height: 70px;
-  background-color: grey;
+  width: 4.4rem;
+  height: 4rem;
+  background-color: $dark;
   border: 0;
-  padding: 10px;
-  color: black;
-  position: absolute;
- 
-  background-position: center;
-  background-repeat: no-repeat;
-  align-items: flex-start;
+  color: $white;
+  position: fixed;
+  top: 49.2%;
+  left: 79.6%;
   text-align: center;
+  line-height: 3.6rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  font-size: 1rem;
+}
 
-  &:hover {
-      cursor: pointer;
+.toggler {
+  margin-top: 3.25rem;
+  color: black;
+  background: transparent;
+  position: fixed;
+  top: 0%;
+  height: 3rem;
+  color: $white;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 3.1rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: $wMD) {
+  .coords-button {
+    left: 82%;
   }
-  & .toggle {
-    
-   }
+}
+
+@media (max-height: $hS) {
+  .coords-button {
+    top: 49%;
+  }
+  .toggler {
+    top: 0%;
+  }
+}
+
+@media (max-width: $wXS) and (max-height: $hXS) {
+  .coords-button {
+    left: 77%;
+  }
+
+  .toggler {
+    height: 2.3rem;
+    width: 2.8rem;
+    left: 83.9%;
+    line-height: 2.5rem;
+    margin-top: 3.05rem;
+  }
+}
+
+@media (min-width: $wIpad) and (min-height: $hIpad) {
+  .coords-button {
+    height: 5rem;
+    width: 5rem;
+    font-size: 1.5rem;
+    line-height: 4.5rem;
+    margin-right: 2rem;
+    left: 81.1%;
+    top: 49.6%;
+  }
+
+  .toggler {
+    height: 4rem;
+    width: 4rem;
+    font-size: 0.8rem;
+    top: 2.7%;
+    right: 2%;
+    line-height: 4.1rem;
+  }
+}
+
+@media (min-width: $wL) and (min-height: $hL) {
+  .coords-button {
+    left: 77.7%;
+    top: 49.15%;
+    height: 5.1rem;
+    width: 5.1rem;
+    font-size: 1.1rem;
+    line-height: 5rem;
+  }
+
+  .toggler {
+    position: fixed;
+    top: 0%;
+    left: 41.2%;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 0.8rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: $wHD) and (min-height: $hHD) {
+  .coords-button {
+    left: 91.3%;
+    top: 49.2%;
+    height: 5.1rem;
+    width: 5.1rem;
+  }
+
+  .toggler {
+    position: fixed;
+    top: 0%;
+    left: 43.1%;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    margin-top: 5rem;
+  }
 }

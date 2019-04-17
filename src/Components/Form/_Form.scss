@@ -3,123 +3,270 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: white;
-
-
-
-  &.toggle {
-      height: 100px;
-      position: absolute;
-      top: 0;
-      background-color: transparent;
-
-      @media (min-width: 500px) {
-          width: 50%;
-          justify-content: flex-start;
-      }
-
-      .search-form-wrapper {
-          flex-direction: row;
-          align-items: center;
-
-          .p-header {
-              font-size: 16px;
-              
-              color: white;
-              margin-right: 20px;
-          }
-
-          input {
-              background: transparent;
-              box-shadow: none;
-              border-bottom: 1px solid white;
-              height: 40px;
-              padding: 10px;
-              color: white;
-          }
-
-          button {
-              background-color: transparent;
-              height: 40px;
-              width: 30px;
-          }
-      }
-  }
+  background-color: $white;
 }
 
 .search-form-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
-  padding: 0 20px;
+  padding: 0 1rem;
   width: 100%;
+}
 
-  @media (min-width: 500px) {
-      margin: 0 auto;
+.p-header {
+  font-family: $fontMain;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+.input-data {
+  width: 64.5%;
+  border: 0;
+  height: 3.9rem;
+  padding: 1.4rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.input-button {
+  width: 4.4rem;
+  height: 4rem;
+  background-color: $dark;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: $white;
+  background-color: transparent;
+}
+
+i {
+  font-size: 2rem;
+}
+
+.toggle {
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  color: black;
+}
+
+.toggle * .search-form-wrapper {
+  height: 3rem;
+  position: fixed;
+  top: 0;
+}
+
+.toggle * .p-header {
+  font-size: 1.4rem;
+  margin-top: 3.6rem;
+  color: $white;
+  font-weight: bold;
+}
+
+.toggle *.input-data {
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background: transparent;
+  color: $white;
+}
+
+.toggle * input::placeholder {
+  font-size: 1rem;
+  padding-left: 0.3rem;
+  vertical-align: text-top;
+  color: $white;
+}
+
+.toggle * input:focus {
+  outline: 0;
+  outline-style: 100;
+}
+
+.toggle * .input-button {
+  background: transparent;
+  height: 3rem;
+  font-size: 0.8rem;
+  color: $white;
+  font-weight: bold;
+}
+
+@media (min-width: $wMD) {
+  .input-data {
+    width: 68.3%;
+  }
+  .p-header {
+    padding-bottom: 0.6rem;
+    padding-left: 0.1;
+  }
+}
+
+@media (max-width: $wXS) and (max-height: $hXS) {
+  .input-data {
+    width: 58.2%;
+  }
+
+  .toggle * .p-header {
+    margin-top: 2.8rem;
+    font-size: 1.2rem;
+  }
+
+  .toggle *.input-data {
+    height: 2.3rem;
+    width: 73.5%;
+  }
+
+  .toggle * .input-button {
+    height: 2.3rem;
+    width: 2.8rem;
+  }
+}
+
+@media (min-width: $wIpad) and (min-height: $hIpad) {
+  .search-form-wrapper {
+    padding: 5rem;
   }
 
   .p-header {
-      font-size: 22px;
-      line-height: 26px;
-     
-      padding: 20px 0;
-      visibility: hidden;
-      position: relative;
-
-      &:before {
-          visibility: visible;
-          content: 'Weather for:';
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-      }
-
-      @media (min-width: 300px + 50px) {
-          visibility: visible;
-
-          &:before {
-              display: none;
-          }
-      }
-
+    font-size: 2.5rem;
   }
 
-  .search-form {
-      position: relative;
-
-
-
-      input {
-          width: 75%;
-          border: 0;
-          height: 70px;
-          font-size: 16px;
-          padding: 20px;
-          
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
-          box-sizing: border-box;
-      }
-
-      button {
-          width: 70px;
-          height: 70px;
-          background-color: grey;
-          border: 0;
-          padding: 10px;
-          color: black;
-          position: absolute;
-          right: 0;
-          
-          background-position: center;
-          background-repeat: no-repeat;
-
-          &:hover {
-              cursor: pointer;
-          }
-      }
+  .input-data {
+    height: 5rem;
+    width: 76.8%;
   }
 
+  .input::placeholder {
+    color: $white;
+    font-size: 2rem;
+  }
 
+  .input-button {
+    height: 5rem;
+    width: 5rem;
+    font-size: 1.5rem;
+  }
 
+  .toggle * .p-header {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+  }
+
+  .toggle * .input-data {
+    height: 4rem;
+    width: 79%;
+  }
+
+  .toggle * .input-button {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@media (min-width: $wL) and (min-height: $hL) {
+  .search-form-wrapper {
+    padding: 5rem;
+  }
+
+  .input-data {
+    height: 5rem;
+    width: 75.5%;
+  }
+
+  .p-header {
+    font-size: 2rem;
+  }
+
+  .input-button {
+    height: 5.1rem;
+    width: 5.1rem;
+  }
+
+  .toggle * .search-form-wrapper {
+    height: 3rem;
+    position: fixed;
+    top: 0;
+  }
+
+  .toggle * .p-header {
+    margin-top: 2rem;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .toggle * .input-data {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 32%;
+    margin: 3rem;
+    margin-top: 4rem;
+  }
+
+  .toggle * .input-button {
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    top: 0%;
+    left: 36.6%;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: $wHD) and (min-height: $hHD) {
+  .input-data {
+    width: 90.5%;
+  }
+
+  .p-header {
+    font-size: 2rem;
+  }
+
+  .input-button {
+    height: 5.1rem;
+    width: 5.1rem;
+  }
+
+  .toggle * .search-form-wrapper {
+    height: 3rem;
+    position: fixed;
+    top: 0;
+  }
+
+  .toggle * .p-header {
+    margin-top: 2rem;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+
+  .toggle * .input-data {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 38%;
+    margin: 3rem;
+    margin-top: 5rem;
+  }
+
+  .toggle * .input-button {
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 0%;
+    left: 40.2%;
+    margin-top: 5rem;
+  }
 }

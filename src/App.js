@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Header from "./Components/Header/Header";
 import Form from "./Components/Form/Form";
 import Result from "./Components/Result/Result";
 import Footer from "./Components/Footer/Footer";
-import "./App.css"
+import "./style.scss"
 
 class App extends Component {
   constructor() {
