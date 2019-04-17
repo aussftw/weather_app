@@ -1,3 +1,92 @@
+.search-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 100%;
+  @media (min-width: $wIpad) and (min-height: $hIpad) {
+    padding: 5rem;
+  }
+  @media (min-width: $wL) and (min-height: $hL) {
+    padding: 5rem;
+  }
+
+  .p-header {
+    font-family: $fontMain;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    margin-bottom: 0;
+    @media (min-width: $wMD) {
+      padding-bottom: 0.6rem;
+    }
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      font-size: 2.5rem;
+    }
+
+    @media (min-width: $wL) and (min-height: $hL) {
+      font-size: 2.2rem;
+    }
+  }
+
+  .input-data {
+    width: 64.5%;
+    border: 0;
+    height: 3.9rem;
+    padding: 1.4rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+
+    @media (min-width: $wMD) {
+      width: 68.3%;
+    }
+
+    @media (max-width: $wXS) and (max-height: $hXS) {
+      width: 58.2%;
+    }
+
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      height: 5rem;
+      width: 76.8%;
+    }
+    @media (min-width: $wL) and (min-height: $hL) {
+      height: 5rem;
+      width: 75.5%;
+    }
+    @media (min-width: $wHD) and (min-height: $hHD) {
+      width: 90.5%;
+    }
+  }
+
+  .input-button {
+    width: 4.4rem;
+    height: 4rem;
+    background-color: $dark;
+    border: 0;
+    color: $white;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      height: 5rem;
+      width: 5rem;
+      font-size: 1.5rem;
+    }
+    @media (min-width: $wL) and (min-height: $hL) {
+      height: 5.1rem;
+      width: 5.1rem;
+    }
+  }
+
+  .input::placeholder {
+    color: $white;
+    background-color: transparent;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+}
+
 .search-wrapper {
   width: 100%;
   height: 100vh;
@@ -6,267 +95,135 @@
   background-color: $white;
 }
 
-.search-form-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 1rem;
-  width: 100%;
-}
-
-.p-header {
-  font-family: $fontMain;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 0.5rem 0;
-}
-
-.input-data {
-  width: 64.5%;
-  border: 0;
-  height: 3.9rem;
-  padding: 1.4rem;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
-}
-
-.input-button {
-  width: 4.4rem;
-  height: 4rem;
-  background-color: $dark;
-  border: 0;
-  color: $white;
-  cursor: pointer;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
-  font-size: 1rem;
-}
-
-.input::placeholder {
-  color: $white;
-  background-color: transparent;
-}
-
-i {
-  font-size: 2rem;
-}
-
 .toggle {
   height: 3rem;
   position: fixed;
   top: 0;
   background-color: transparent;
   color: black;
-}
 
-.toggle * .search-form-wrapper {
-  height: 3rem;
-  position: fixed;
-  top: 0;
-}
-
-.toggle * .p-header {
-  font-size: 1.4rem;
-  margin-top: 3.6rem;
-  color: $white;
-  font-weight: bold;
-}
-
-.toggle *.input-data {
-  height: 3rem;
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  background: transparent;
-  color: $white;
-}
-
-.toggle * input::placeholder {
-  font-size: 1rem;
-  padding-left: 0.3rem;
-  vertical-align: text-top;
-  color: $white;
-}
-
-.toggle * input:focus {
-  outline: 0;
-  outline-style: 100;
-}
-
-.toggle * .input-button {
-  background: transparent;
-  height: 3rem;
-  font-size: 0.8rem;
-  color: $white;
-  font-weight: bold;
-}
-
-@media (min-width: $wMD) {
-  .input-data {
-    width: 68.3%;
-  }
-  .p-header {
-    padding-bottom: 0.6rem;
-    padding-left: 0.1;
-  }
-}
-
-@media (max-width: $wXS) and (max-height: $hXS) {
-  .input-data {
-    width: 58.2%;
-  }
-
-  .toggle * .p-header {
-    margin-top: 2.8rem;
-    font-size: 1.2rem;
-  }
-
-  .toggle *.input-data {
-    height: 2.3rem;
-    width: 73.5%;
-  }
-
-  .toggle * .input-button {
-    height: 2.3rem;
-    width: 2.8rem;
-  }
-}
-
-@media (min-width: $wIpad) and (min-height: $hIpad) {
   .search-form-wrapper {
-    padding: 5rem;
+    height: 3rem;
+    position: fixed;
+    top: 0;
   }
 
   .p-header {
-    font-size: 2.5rem;
-  }
-
-  .input-data {
-    height: 5rem;
-    width: 76.8%;
-  }
-
-  .input::placeholder {
+    font-size: 1.4rem;
+    margin-top: 3.6rem;
     color: $white;
-    font-size: 2rem;
-  }
+    font-weight: bold;
+    @media (max-width: $wXS) and (max-height: $hXS) {
+      margin-top: 2.8rem;
+      font-size: 1.2rem;
+    }
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      margin-top: 1rem;
+      font-size: 1.7rem;
+    }
 
-  .input-button {
-    height: 5rem;
-    width: 5rem;
-    font-size: 1.5rem;
-  }
-
-  .toggle * .p-header {
-    margin-top: 1rem;
-    font-size: 1.7rem;
-  }
-
-  .toggle * .input-data {
-    height: 4rem;
-    width: 79%;
-  }
-
-  .toggle * .input-button {
-    height: 4rem;
-    width: 4rem;
-  }
-}
-
-@media (min-width: $wL) and (min-height: $hL) {
-  .search-form-wrapper {
-    padding: 5rem;
+    @media (min-width: $wL) and (min-height: $hL) {
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      margin-left: 3rem;
+      margin-top: 1.2rem;
+    }
+    @media (min-width: $wHD) and (min-height: $hHD) {
+      margin-top: 2rem;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      margin-left: 3rem;
+      margin-top: 1rem;
+    }
   }
 
   .input-data {
-    height: 5rem;
-    width: 75.5%;
+    height: 3rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    background: transparent;
+    color: $white;
+    @media (max-width: $wXS) and (max-height: $hXS) {
+      height: 2.3rem;
+      width: 73.5%;
+    }
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      height: 4rem;
+      width: 79%;
+    }
+
+    @media (min-width: $wL) and (min-height: $hL) {
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      width: 34%;
+      margin: 3rem;
+      margin-top: 5rem;
+    }
+
+    @media (min-width: $wHD) and (min-height: $hHD) {
+      width: 90.5%;
+    }
+
+    @media (min-width: $wHD) and (min-height: $hHD) {
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      width: 42%;
+      margin: 3rem;
+      margin-top: 5rem;
+    }
   }
 
-  .p-header {
-    font-size: 2rem;
+  input::placeholder {
+    font-size: 1rem;
+    padding-left: 0.3rem;
+    vertical-align: text-top;
+    color: $white;
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      color: $white;
+      font-size: 1.3rem;
+    }
+  }
+
+  input:focus {
+    outline: 0;
+    outline-style: 100;
   }
 
   .input-button {
-    height: 5.1rem;
-    width: 5.1rem;
-  }
-
-  .toggle * .search-form-wrapper {
+    background: transparent;
     height: 3rem;
-    position: fixed;
-    top: 0;
-  }
+    font-size: 0.8rem;
+    color: $white;
+    font-weight: bold;
+    @media (max-width: $wXS) and (max-height: $hXS) {
+      height: 2.3rem;
+      width: 2.8rem;
+    }
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      height: 4rem;
+      width: 4rem;
+    }
 
-  .toggle * .p-header {
-    margin-top: 2rem;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    margin-left: 3rem;
-    margin-top: 1rem;
-  }
+    @media (min-width: $wL) and (min-height: $hL) {
+      height: 4rem;
+      width: 4rem;
+      position: fixed;
+      top: 0%;
+      left: 36.6%;
+      margin-top: 5rem;
+    }
 
-  .toggle * .input-data {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 32%;
-    margin: 3rem;
-    margin-top: 4rem;
-  }
-
-  .toggle * .input-button {
-    height: 3rem;
-    width: 3rem;
-    position: fixed;
-    top: 0%;
-    left: 36.6%;
-    margin-top: 4rem;
-  }
-}
-
-@media (min-width: $wHD) and (min-height: $hHD) {
-  .input-data {
-    width: 90.5%;
-  }
-
-  .p-header {
-    font-size: 2rem;
-  }
-
-  .input-button {
-    height: 5.1rem;
-    width: 5.1rem;
-  }
-
-  .toggle * .search-form-wrapper {
-    height: 3rem;
-    position: fixed;
-    top: 0;
-  }
-
-  .toggle * .p-header {
-    margin-top: 2rem;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    margin-left: 3rem;
-    margin-top: 1rem;
-  }
-
-  .toggle * .input-data {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 38%;
-    margin: 3rem;
-    margin-top: 5rem;
-  }
-
-  .toggle * .input-button {
-    height: 4rem;
-    width: 4rem;
-    position: fixed;
-    top: 0%;
-    left: 40.2%;
-    margin-top: 5rem;
+    @media (min-width: $wHD) and (min-height: $hHD) {
+      height: 4rem;
+      width: 4rem;
+      position: fixed;
+      top: 0%;
+      left: 44.2%;
+      margin-top: 5rem;
+    }
   }
 }
