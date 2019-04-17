@@ -46,14 +46,14 @@
 
     @media (min-width: $wIpad) and (min-height: $hIpad) {
       height: 5rem;
-      width: 76.8%;
+      width: 76.9%;
     }
     @media (min-width: $wL) and (min-height: $hL) {
       height: 5rem;
-      width: 75.5%;
+      width: 89.7%;
     }
     @media (min-width: $wHD) and (min-height: $hHD) {
-      width: 90.5%;
+      width: 94.7%;
     }
   }
 
@@ -151,20 +151,16 @@
     }
     @media (min-width: $wIpad) and (min-height: $hIpad) {
       height: 4rem;
-      width: 79%;
+      width: 83.9%;
     }
 
     @media (min-width: $wL) and (min-height: $hL) {
       position: fixed;
       top: 0%;
       left: 0%;
-      width: 34%;
+      width: 36.5%;
       margin: 3rem;
       margin-top: 5rem;
-    }
-
-    @media (min-width: $wHD) and (min-height: $hHD) {
-      width: 90.5%;
     }
 
     @media (min-width: $wHD) and (min-height: $hHD) {
@@ -174,6 +170,7 @@
       width: 42%;
       margin: 3rem;
       margin-top: 5rem;
+      width: 39.7%;
     }
   }
 
@@ -213,7 +210,7 @@
       width: 4rem;
       position: fixed;
       top: 0%;
-      left: 36.6%;
+      left: 39.2%;
       margin-top: 5rem;
     }
 
@@ -222,7 +219,7 @@
       width: 4rem;
       position: fixed;
       top: 0%;
-      left: 44.2%;
+      left: 42%;
       margin-top: 5rem;
     }
   }
