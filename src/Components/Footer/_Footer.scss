@@ -5,102 +5,60 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-}
-
-.footer-text {
-  color: $white;
-  font-family: $fontMain;
-}
-
-.socials {
-  margin-left: 1rem;
-  font-size: 0.9rem;
-}
-
-i.large.github.icon::before,
-i.large.linkedin.icon::before {
-  color: $white;
-}
-
-@media screen and (max-width: 375px) and (max-height: 812px) {
-  .footer-container {
-    margin-bottom: 3%;
-  }
-  .footer-text {
-    font-size: 0.9rem;
-  }
-
-  .socials {
-    margin-left: 0.5rem;
-    color: white;
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: $wMD) {
-  .footer-text {
+  margin-bottom: 1rem;
+  @media (min-width: $wMD) {
     font-size: 0.9rem;
     margin-bottom: 0.6rem;
   }
-
-  i.large.github.icon::before,
-  i.large.linkedin.icon::before {
-    font-size: 1.1rem;
-    margin-left: 0.1rem;
-  }
-}
-
-@media (max-height: $hS) {
-  .footer-container {
+  @media (max-height:  $hS) {
     margin-bottom: 1.5%;
   }
-
-  .footer-text {
-    font-size: 0.8rem;
+  @media (max-width: $wXS) and (max-height: $hXS) {
+    margin-bottom: 0.6rem;
   }
-
-  i.large.github.icon::before,
-  i.large.linkedin.icon::before {
-    font-size: 1rem;
-    margin-left: 0.1rem;
-  }
-}
-
-@media (max-width: $wXS) and (max-height: $hXS) {
-  .footer-container {
-    margin-bottom: 0%;
-    padding: 0.1rem;
-  }
-
-  .footer-text {
-    padding-bottom: 0;
-  }
-}
-
-@media (min-width: $wIpad) and (min-height: $hIpad) {
-  .footer-container {
-    margin-bottom: 0;
-  }
-  .footer-text {
-    font-size: 1rem;
-    margin: 0.5rem;
-  }
-}
-
-@media (min-width: $wL) and (min-height: $wL) {
-  .footer-container {
+  @media (min-width: $wL) and (min-height: $wL) {
     justify-content: flex-end;
     text-align: center;
   }
-  .footer-text {
-    font-size: 1.1rem;
-    margin-right: 2rem;
-    margin-bottom: 0.5rem;
-  }
 
-  i.large.github.icon::before,
-  i.large.linkedin.icon::before {
-    font-size: 1.2rem;
-    margin-left: 0rem;
+
+  .footer-text {
+    color: $white;
+    font-family: $fontMain;
+    @media (max-height: $hS) {
+      font-size: 0.8rem;
+    }
+    @media (min-width: $wIpad) and (min-height: $hIpad) {
+      font-size: 1rem;
+    }
+    @media (min-width: $wL) and (min-height: $wL) {
+      font-size: 1.1rem;
+      margin-right: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .socials {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+
+      i.large.github.icon::before,
+      i.large.linkedin.icon::before {
+        color: $white;
+
+        @media (min-width: $wMD) {
+          font-size: 1.2rem;
+          margin-left: 0.1rem;
+        }
+
+        @media (max-height: $hS) {
+          font-size: 1rem;
+          margin-left: -1.5rem;
+        }
+        @media (min-width: $wL) and (min-height: $wL) {
+          font-size: 1.2rem;
+          margin-left: 0rem;
+        }
+      }
+    }
   }
 }
