@@ -47,7 +47,7 @@ class App extends Component {
     const temp = Math.round(this.state.actualWeather.temp);
     const wind = Math.round(this.state.actualWeather.wind);
 
-    const apiСallWeather = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`);
+    const apiСallWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`);
 
     const response = await apiСallWeather.json();
 
