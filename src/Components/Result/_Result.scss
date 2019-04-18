@@ -28,8 +28,17 @@
     height: 55vh;
     padding: 2rem;
   }
-  @media (min-width: wL) and (min-height: $hL) {
-    
+  @media (min-width: $wL) and (min-height: $hL) {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    box-sizing: border-box;
   }
   
 
@@ -54,8 +63,8 @@
     @media (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 3rem;
     }
-    @media (min-width: wL) and (min-height: $hL) {
-      
+    @media (min-width: $wL) and (min-height: $hL) {
+      font-size: 4rem;
     }
   }
 
@@ -78,8 +87,8 @@
     @media (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 1.3rem;
     }
-    @media (min-width: wL) and (min-height: $hL) {
-      
+    @media (min-width: $wL) and (min-height: $hL) {
+      font-size: 1.5rem;
     }
   }
 
@@ -89,6 +98,11 @@
     @media (max-width: $wXS) and (max-height: $hXS) {
       font-size: 1.1rem;
     }
+
+    @media (min-width: $wL) and (min-height: $hL) {
+      margin: 0;
+      font-size: 2.2rem
+    }
       }
 
 
@@ -97,40 +111,55 @@
   }
 }
 
-.forecast {
-  h2 {
-    margin: 1rem 0;
-    margin-left: 1rem;
-    font-size: 1.3rem;
-    color: white;
-    font-family: $fontMain;
-    @media (min-width: $wMD) {
-    margin: 0; 
-    padding: 0.8rem 0 ;
-    margin-left: 1rem;
-    font-size: 1.2rem;
-    }
-  
-    @media (max-height: $hS) {
-      margin: 0;
-      padding: 0.7rem 0;
-      margin-left: 1.1rem;
+  .forecast {
+    h2 {
+      margin: 1rem 0;
+      margin-left: 1rem;
+      font-size: 1.3rem;
+      color: white;
+      font-family: $fontMain;
+      @media (min-width: $wMD) {
+      margin: 0; 
+      padding: 0.8rem 0 ;
+      margin-left: 1rem;
       font-size: 1.2rem;
-    }
-    @media (max-width: $wXS) and (max-height: $hXS) {
-      padding: 0.6rem 0;
-      margin-left: 0.8rem;
-      font-size: 1.2rem;
-    }
-    @media (min-width: $wIpad) and (min-height: $hIpad) {
-      padding: 1.5rem 0;
-      margin-left: 2rem;
-      font-size: 1.5rem;
-    }
-    @media (min-width: wL) and (min-height: $hL) {
-      
-    }
+      }
+    
+      @media (max-height: $hS) {
+        margin: 0;
+        padding: 0.7rem 0;
+        margin-left: 1.1rem;
+        font-size: 1.2rem;
+      }
+      @media (max-width: $wXS) and (max-height: $hXS) {
+        padding: 0.6rem 0;
+        margin-left: 0.8rem;
+        font-size: 1.2rem;
+      }
+      @media (min-width: $wIpad) and (min-height: $hIpad) {
+        padding: 1.5rem 0;
+        margin-left: 2rem;
+        font-size: 1.5rem;
+      }
+      @media (min-width: $wL) and (min-height: $hL) {
+        padding: 1.5rem 0;
+        padding-bottom: 0;
+        margin-left: 2rem;
+        font-size: 2rem;
+      }
+    }  
   }
+  
+  .forecast {
+    @media (min-width: $wL) and (min-height: $hL) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+  }
+}
+    
+  
 
   .forecast-item {
     color: white;
@@ -155,11 +184,38 @@
     @media (min-width: $wIpad) and (min-height: $hIpad) {
       margin: 0.3rem 2rem;
     }
-    @media (min-width: wL) and (min-height: $hL) {
-      
+    @media (min-width: $wL) and (min-height: $hL) {
+      color: white;
+      background-color: $light;
+      margin: 1.5rem;
+      padding: 0rem;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      height: 12rem;
+
+      p {
+        
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+        margin-left: 2rem;
+      }
     }
+
   }
 
+  br {
+    @media (max-height: $hS) { 
+        display: none;
+      }
+      @media (max-width: $wXS) and (max-height: $hXS) {
+        display: none;
+      }
+      @media (min-width: $wL) and (min-height: $hL) {
+        display: none;
+      }
+    }
 
   .date,
   .forecast-temp,
@@ -178,21 +234,28 @@
       font-size: 0.8rem;
     }
     @media (max-width: $wXS) and (max-height: $hXS) {
-      font-size: 0.73rem;
+      font-size: 0.7rem;
     }
     @media (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 1.1rem;
     }
-    @media (min-width: wL) and (min-height: $hL) {
-      
+    @media (min-width: $wL) and (min-height: $hL) {
+      margin: 0.5rem;
+      margin-left: 0;
+      font-size: 1rem;
+      text-align: start;
+      justify-content: center;
+      line-height: 1rem;
     }
   }
 
 
   .forecast-wind {
     padding-top: 0.2rem;
-    @media (min-width: wL) and (min-height: $hL) {
-      
+    @media (min-width: $wL) and (min-height: $hL) {
+      padding-top: 0rem;
+      margin-left: 0rem;
+      margin-top: 0rem;
     }
   }
 
@@ -206,129 +269,26 @@
     @media (max-width: $wXS) and (max-height: $hXS) {
       margin-top: 0rem;
     }
-    @media (min-width: wL) and (min-height: $hL) {
+    @media (min-width: $wL) and (min-height: $hL) {
+        margin-top: 1.4rem;
+        margin-left: 0rem;
       
+    }
+  }
+  .forecast-temp {
+    @media(min-width: $wL) and (min-height: $hL ) {
+      margin-left: -0.2rem;
     }
   }
 
   .forecast-temp,
   .forecast-humidity {
     margin-top: 0.2rem;
-    @media (min-width: wL) and (min-height: $hL) {
-      
+    @media (min-width: $wL) and (min-height: $hL) {
+      margin-top: 0rem;
     }
   }
-}
 
-@media (max-height: $hS) {
-  br {
-    display: none;
-  }
-}
 
-@media (max-width: $wXS) and (max-height: $hXS) {
 
-  br {
-    display: none;
-  }
 
-}
-
-@media (min-width: $wL) and (min-height: $hL) {
-  .actual-weather-wrapper {
-    height: 100vh;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 2rem;
-    padding-bottom: 1rem;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .city,
-  .temp {
-    font-size: 4rem;
-  }
-
-  .wind,
-  .pressure,
-  .humidity,
-  .description {
-    font-size: 1.5rem;
-  }
-
-  .widnchill,
-  h3 {
-    margin: 0;
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    padding: 2rem 0;
-    padding-bottom: 0;
-    margin-left: 2rem;
-    font-size: 2rem;
-  }
-
-  .forecast {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50vw;
-  }
-
-  .forecast-item {
-    color: white;
-    background-color: $light;
-    margin: 2rem;
-    padding: 0.5rem;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    height: 8rem;
-  }
-
-  br {
-    display: none;
-  }
-
-  .date,
-  .forecast-temp,
-  .forecast-desc,
-  .forecast-wind,
-  .forecast-humidity {
-    margin: 0.5rem;
-    margin-left: 0;
-    font-size: 1rem;
-    text-align: start;
-    justify-content: center;
-    line-height: 1rem;
-  }
-
-  .forecast-wind {
-    padding-top: 0rem;
-    margin-left: 0.3rem;
-    margin-top: 0rem;
-  }
-
-  .date {
-    margin-top: 0rem;
-    margin-left: 0.5rem;
-  }
-
-  .forecast-temp,
-  .forecast-humidity {
-    margin-top: 0rem;
-  }
-
-  .forecast-humidity {
-    margin-left: 0.3rem;
-  }
-
-  .forecast-temp {
-    margin-left: 0.2rem;
-  }
-}

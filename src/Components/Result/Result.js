@@ -20,7 +20,7 @@ const Result = props => {
           <p><i className="angle double right icon" /><br />{list.wind.speed.toFixed()} KM/H </p>
         </div>
         <div className="forecast-humidity" key={list.main.humidity}>
-          <p><i className="cloud icon" /><br />{list.main.humidity} %</p>
+          <p><i className="cloud icon" /><br /> {list.main.humidity} %</p>
         </div>
       </div>
 
