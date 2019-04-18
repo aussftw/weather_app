@@ -6,14 +6,14 @@
   position: fixed;
   bottom: 0;
   margin-bottom: 1rem;
-  @media (min-width: $wMD) {
+  @media only screen and (min-width: $wMD) {
     font-size: 0.9rem;
     margin-bottom: 0.6rem;
   }
-  @media (max-height:  $hS) {
+  @media only screen and  (max-height:  $hS) {
     margin-bottom: 1.5%;
   }
-  @media (max-width: $wXS) and (max-height: $hXS) {
+  @media only screen and (max-width: $wXS) and (max-height: $hXS) {
     margin-bottom: 0.6rem;
   }
   @media (min-width: $wL) and (min-height: $wL) {
@@ -25,10 +25,10 @@
   .footer-text {
     color: $white;
     font-family: $fontMain;
-    @media (max-height: $hS) {
+    @media only screen and (max-height: $hS) {
       font-size: 0.8rem;
     }
-    @media (min-width: $wIpad) and (min-height: $hIpad) {
+    @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 1rem;
     }
     @media (min-width: $wL) and (min-height: $wL) {
@@ -45,12 +45,12 @@
       i.large.linkedin.icon::before {
         color: $white;
 
-        @media (min-width: $wMD) {
+        @media only screen and (min-width: $wMD) {
           font-size: 1.2rem;
           margin-left: 0.1rem;
         }
 
-        @media (max-height: $hS) {
+        @media only screen and (max-height: $hS) {
           font-size: 1rem;
           margin-left: -1.5rem;
         }

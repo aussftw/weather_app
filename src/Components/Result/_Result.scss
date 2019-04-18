@@ -12,19 +12,19 @@
   align-items: flex-start;
   padding: 1rem;
 
-  @media (min-width: $wMD) {
+  @media only screen and (min-width: $wMD) {
     height: 40vh;
     min-height: 360px;
   }
 
-  @media (max-height: $hS) {
+  @media only screen and (max-height: $hS) {
     min-height: 360px;
   }
-  @media (max-width: $wXS) and (max-height: $hXS) {
+  @media only screen and (max-width: $wXS) and (max-height: $hXS) {
     min-height: 284px;
     padding: 0.8rem;
   }
-  @media (min-width: $wIpad) and (min-height: $hIpad) {
+  @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
     height: 55vh;
     padding: 2rem;
   }
@@ -49,18 +49,18 @@
     color: $white;
     font-weight: bold;
     font-family: $fontMain;
-    @media (min-width: $wMD) {
+    @media only screen and (min-width: $wMD) {
       font-size: 1.6rem;
     }
   
-    @media (max-height: $hS) {
+    @media only screen and (max-height: $hS) {
       font-size: 1.6rem;
     }
-    @media (max-width: $wXS) and (max-height: $hXS) {
+    @media only screen and (max-width: $wXS) and (max-height: $hXS) {
       font-size: 1.3rem;
       margin-bottom: 0.1rem;
     }
-    @media (min-width: $wIpad) and (min-height: $hIpad) {
+    @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 3rem;
     }
     @media (min-width: $wL) and (min-height: $hL) {
@@ -75,16 +75,16 @@
     font-size: 1rem;
     margin: 0.1rem;
     font-family: $fontSub;
-    @media (min-width: $wMD) {
+    @media only screen and (min-width: $wMD) {
       font-size: 1.1rem;
        margin: 0.1rem;
     }
   
-    @media (max-width: $wXS) and (max-height: $hXS) {
+    @media only screen and (max-width: $wXS) and (max-height: $hXS) {
       font-size: 0.9rem;
       margin: 0;
     }
-    @media (min-width: $wIpad) and (min-height: $hIpad) {
+    @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 1.3rem;
     }
     @media (min-width: $wL) and (min-height: $hL) {
@@ -95,7 +95,7 @@
   .widnchill,
   h3 {
     margin: 0;
-    @media (max-width: $wXS) and (max-height: $hXS) {
+    @media only screen and (max-width: $wXS) and (max-height: $hXS) {
       font-size: 1.1rem;
     }
 
@@ -118,25 +118,25 @@
       font-size: 1.3rem;
       color: white;
       font-family: $fontMain;
-      @media (min-width: $wMD) {
+      @media only screen and (min-width: $wMD) {
       margin: 0; 
       padding: 0.8rem 0 ;
       margin-left: 1rem;
       font-size: 1.2rem;
       }
     
-      @media (max-height: $hS) {
+      @media only screen and (max-height: $hS) {
         margin: 0;
         padding: 0.7rem 0;
         margin-left: 1.1rem;
         font-size: 1.2rem;
       }
-      @media (max-width: $wXS) and (max-height: $hXS) {
+      @media only screen and (max-width: $wXS) and (max-height: $hXS) {
         padding: 0.6rem 0;
         margin-left: 0.8rem;
         font-size: 1.2rem;
       }
-      @media (min-width: $wIpad) and (min-height: $hIpad) {
+      @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
         padding: 1.5rem 0;
         margin-left: 2rem;
         font-size: 1.5rem;
@@ -149,7 +149,7 @@
       }
     }  
   }
-  
+
   .forecast {
     @media (min-width: $wL) and (min-height: $hL) {
     position: fixed;
@@ -159,8 +159,6 @@
   }
 }
     
-  
-
   .forecast-item {
     color: white;
     background-color: $light;
@@ -171,17 +169,17 @@
     grid-template-columns: 1/3 1 /5 1/6 1/6;
     grid-template-rows: auto;
     grid-template-areas: "date forecast-temp forecast-wind forecast-humidity ";
-    @media (min-width: $wMD) {
+    @media only screen and (min-width: $wMD) {
       margin: 0.3rem 0.9rem;
     }
-    @media (max-height: $hS) {
+    @media only screen and (max-height: $hS) {
       height: 3rem;
     }
-    @media (max-width: $wXS) and (max-height: $hXS) {
+    @media only screen and (max-width: $wXS) and (max-height: $hXS) {
       height: 2.5rem;
       margin: 0.3rem 0.8rem;
     }
-    @media (min-width: $wIpad) and (min-height: $hIpad) {
+    @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       margin: 0.3rem 2rem;
     }
     @media (min-width: $wL) and (min-height: $hL) {
@@ -206,10 +204,10 @@
   }
 
   br {
-    @media (max-height: $hS) { 
+    @media only screen and (max-height: $hS) { 
         display: none;
       }
-      @media (max-width: $wXS) and (max-height: $hXS) {
+      @media only screen and (max-width: $wXS) and (max-height: $hXS) {
         display: none;
       }
       @media (min-width: $wL) and (min-height: $hL) {
@@ -226,17 +224,17 @@
     font-size: 0.9rem;
     text-align: center;
     font-family: $fontSub;
-    @media (min-width: $wMD) {
+    @media only screen and (min-width: $wMD) {
       font-size: 0.8rem;
     }
   
-    @media (max-height: $hS) {
+    @media only screen and  (max-height: $hS) {
       font-size: 0.8rem;
     }
-    @media (max-width: $wXS) and (max-height: $hXS) {
+    @media only screen and (max-width: $wXS) and (max-height: $hXS) {
       font-size: 0.7rem;
     }
-    @media (min-width: $wIpad) and (min-height: $hIpad) {
+    @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 1.1rem;
     }
     @media (min-width: $wL) and (min-height: $hL) {
@@ -262,11 +260,11 @@
   .date {
     margin-top: 1.5rem;
     margin-left: 0.2rem;
-    @media (max-height: $hS) {
+    @media only screen and (max-height: $hS) {
       margin-top: 0.5rem;
       margin-left: 0.3rem;
     }
-    @media (max-width: $wXS) and (max-height: $hXS) {
+    @media only screen and (max-width: $wXS) and (max-height: $hXS) {
       margin-top: 0rem;
     }
     @media (min-width: $wL) and (min-height: $hL) {
