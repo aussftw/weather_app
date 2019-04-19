@@ -34,7 +34,7 @@ body {
   @media only screen and  (max-height: $hS) {
     top: 49%;
   }
-  @media only screen and (max-width: $wXS) and (max-height: $hXS) {
+  @media only screen and (max-device-width: $wXS) and (max-device-height: $hXS) {
     left: 77%;
   }
   @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
@@ -78,7 +78,7 @@ body {
     left: 82%;
   }
 
-  @media only screen and (max-width: $wXS) and (max-height: $hXS) {
+  @media only screen and (max-device-width: $wXS) and (max-device-height: $hXS) {
     height: 2.3rem;
     width: 2.8rem;
     left: 83.9%;
