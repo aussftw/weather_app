@@ -34,7 +34,7 @@ body {
   @media only screen and  (max-height: $hS) {
     top: 49%;
   }
-  @media only screen and (max-device-width: $wXS) and (max-device-height: $hXS) {
+  @media only screen and (max-width: $wXS) and (max-height: $hXS) {
     left: 77%;
   }
   @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
@@ -46,7 +46,7 @@ body {
     left: 81.1%;
     top: 49.7%;
   }
-  @media (min-width: $wL) and (min-height: $hL) {
+  @media only screen and (min-width: $wL) and (min-height: $hL) {
     left: 90.7%;
     top: 49.55%;
     height: 5.1rem;
@@ -54,7 +54,7 @@ body {
     font-size: 1.1rem;
     line-height: 5rem;
   }
-  @media (min-width: $wHD) and (min-height: $hHD) {
+  @media only screen and (min-width: $wHD) and (min-height: $hHD) {
     left: 95%;
     top: 49.4%;
     height: 5.1rem;
@@ -78,14 +78,14 @@ body {
     left: 82%;
   }
 
-  @media only screen and (max-device-width: $wXS) and (max-device-height: $hXS) {
+  @media only screen and (max-width: $wXS) and (max-height: $hXS) {
     height: 2.3rem;
     width: 2.8rem;
     left: 83.9%;
     line-height: 2.5rem;
     margin-top: 3.05rem;
   }
-  @media only screen and  (min-width: $wIpad) and (min-height: $hIpad) {
+  @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
     height: 4rem;
     width: 4rem;
     font-size: 0.8rem;
@@ -93,7 +93,7 @@ body {
     left: 85%;
     line-height: 4.1rem;
   }
-  @media (min-width: $wL) and (min-height: $hL) {
+  @media only screen and (min-width: $wL) and (min-height: $hL) {
     position: fixed;
     top: 0%;
     left: 43%;
@@ -103,7 +103,7 @@ body {
     font-size: 0.9rem;
     margin-top: 5rem;
   }
-  @media (min-width: $wHD) and (min-height: $hHD) {
+  @media only screen and (min-width: $wHD) and (min-height: $hHD) {
     position: fixed;
     top: 0%;
     left: 45%;
