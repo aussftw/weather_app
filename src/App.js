@@ -159,7 +159,7 @@ class App extends Component {
     return (
       <div>
         <div>
-          <Form loadInputWeather={this.getInputWeather} visible={this.state.visible} coordsButton={this.getCoordsWeather} />
+          <Form loadInputWeather={this.getInputWeather} visible={this.state.visible} />
           <div>{this.renderButton()}</div>
         </div>
         <div className={` ${this.state.visible === true ? "" : "hidden"}`}>
