@@ -130,12 +130,7 @@
     }
 
     @media (min-width: $wHD) and (min-height: $hHD) {
-      margin-top: 2rem;
-      position: fixed;
-      top: 0%;
-      left: 0%;
-      margin-left: 3rem;
-      margin-top: 1rem;
+      margin-top: 11rem;
     }
   }
 
@@ -160,12 +155,8 @@
     }
 
     @media (min-width: $wHD) and (min-height: $hHD) {
-      position: fixed;
-      top: 0%;
-      left: 0%;
-      margin: 3rem;
-      margin-top: 5rem;
-      width: 40.4%;
+      width: 36%;
+      vertical-align: 14rem;
     }
   }
 
@@ -208,11 +199,8 @@
 
     @media (min-width: $wHD) and (min-height: $hHD) {
       height: 4rem;
-      width: 4rem;
-      position: fixed;
-      top: 0%;
-      left: 42.4%;
-      margin-top: 5rem;
+      width: 5%;
+      vertical-align: 14rem;
     }
   }
 }
