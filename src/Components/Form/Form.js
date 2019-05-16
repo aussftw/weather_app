@@ -5,8 +5,8 @@ const Form = props => {
   return (
     <div className={`search-wrapper ${props.visible === true ? "toggle" : ""}`}>
       <div className="search-form-wrapper">
-        <p className="p-header">Look at weather at any city</p>
         <form onSubmit={props.loadInputWeather} className="search-form">
+          <p className="p-header">Look at weather at any city</p>
           <input
             type="text"
             name="city"

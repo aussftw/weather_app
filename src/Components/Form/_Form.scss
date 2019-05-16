@@ -34,7 +34,7 @@
   .input-data {
     width: 70%;
     border: 0;
-    height: 3.9rem;
+    height: 4rem;
     padding: 1.4rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 
@@ -52,10 +52,10 @@
     }
     @media (min-width: $wL) and (min-height: $hL) {
       height: 5rem;
-      width: 89.7%;
+      width: 85.7%;
     }
     @media (min-width: $wHD) and (min-height: $hHD) {
-      width: 90%;
+      width: 88%;
     }
   }
 
@@ -109,8 +109,6 @@
 
   .search-form-wrapper {
     height: 3rem;
-    position: fixed;
-    top: 0;
   }
 
   .p-header {
@@ -128,12 +126,9 @@
     }
 
     @media (min-width: $wL) and (min-height: $hL) {
-      position: fixed;
-      top: 0%;
-      left: 0%;
-      margin-left: 3rem;
-      margin-top: 1.2rem;
+      margin-top: 1.5rem;
     }
+
     @media (min-width: $wHD) and (min-height: $hHD) {
       margin-top: 2rem;
       position: fixed;
@@ -160,12 +155,8 @@
     }
 
     @media (min-width: $wL) and (min-height: $hL) {
-      position: fixed;
-      top: 0%;
-      left: 0%;
-      width: 36.5%;
-      margin: 3rem;
-      margin-top: 5rem;
+      width: 38%;
+      vertical-align: 5rem;
     }
 
     @media (min-width: $wHD) and (min-height: $hHD) {
@@ -211,11 +202,8 @@
 
     @media (min-width: $wL) and (min-height: $hL) {
       height: 3rem;
-      width: 3rem;
-      position: fixed;
-      top: 0%;
-      left: 39.2%;
-      margin-top: 5rem;
+      width: 4%;
+      vertical-align: 5rem;
     }
 
     @media (min-width: $wHD) and (min-height: $hHD) {
