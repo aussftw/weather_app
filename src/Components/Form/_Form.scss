@@ -32,35 +32,35 @@
   }
 
   .input-data {
-    width: 64.5%;
+    width: 70%;
     border: 0;
     height: 3.9rem;
     padding: 1.4rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 
     @media only screen and (min-width: $wMD) {
-      width: 68.3%;
+      width: 70%;
     }
 
     @media only screen and (max-width: $wXS) and (max-height: $hXS) {
-      width: 58.2%;
+      width: 60%;
     }
 
     @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       height: 5rem;
-      width: 76.9%;
+      width: 78%;
     }
     @media (min-width: $wL) and (min-height: $hL) {
       height: 5rem;
       width: 89.7%;
     }
     @media (min-width: $wHD) and (min-height: $hHD) {
-      width: 94.7%;
+      width: 90%;
     }
   }
 
   .input-button {
-    width: 4.4rem;
+    width: 15%;
     height: 4rem;
     background-color: $dark;
     border: 0;
@@ -68,9 +68,12 @@
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
     font-size: 1rem;
+    @media only screen and (max-width: $wXS) and (max-height: $hXS) {
+      width: 20%;
+    }
     @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       height: 5rem;
-      width: 5rem;
+      width: 11%;
       font-size: 1.5rem;
     }
     @media (min-width: $wL) and (min-height: $hL) {
@@ -149,11 +152,11 @@
     color: $white;
     @media only screen and (max-width: $wXS) and (max-height: $hXS) {
       height: 2.3rem;
-      width: 73.5%;
+      width: 70%;
     }
     @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       height: 4rem;
-      width: 83.9%;
+      width: 80%;
     }
 
     @media (min-width: $wL) and (min-height: $hL) {
