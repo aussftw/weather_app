@@ -4,12 +4,12 @@
   justify-content: center;
   padding: 0 1rem;
   width: 100%;
- 
-  @media  (min-width: $wL) and (min-height: $hL) {
+
+  @media (min-width: $wL) and (min-height: $hL) {
     padding: 5rem;
   }
 
-  @media  only screen and (min-width: $wIpad) and (min-height: $hIpad) {
+  @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
     padding: 5rem;
   }
 
@@ -22,11 +22,11 @@
     @media screen and (min-width: $wMD) {
       padding-bottom: 0.6rem;
     }
-    @media only screen and (min-width: $wIpad) and  (min-height: $hIpad) {
+    @media only screen and (min-width: $wIpad) and (min-height: $hIpad) {
       font-size: 2.5rem;
     }
 
-    @media  (min-width: $wL) and (min-height: $hL) {
+    @media (min-width: $wL) and (min-height: $hL) {
       font-size: 2.2rem;
     }
   }
@@ -50,7 +50,7 @@
       height: 5rem;
       width: 76.9%;
     }
-    @media  (min-width: $wL) and (min-height: $hL) {
+    @media (min-width: $wL) and (min-height: $hL) {
       height: 5rem;
       width: 89.7%;
     }
@@ -115,7 +115,7 @@
     margin-top: 3.6rem;
     color: $white;
     font-weight: bold;
-    @media  (max-width: $wXS) and (max-height: $hXS) {
+    @media (max-width: $wXS) and (max-height: $hXS) {
       margin-top: 2.8rem;
       font-size: 1.2rem;
     }
@@ -144,7 +144,7 @@
   .input-data {
     height: 3rem;
     padding: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     background: transparent;
     color: $white;
     @media only screen and (max-width: $wXS) and (max-height: $hXS) {
@@ -165,7 +165,7 @@
       margin-top: 5rem;
     }
 
-    @media  (min-width: $wHD) and (min-height: $hHD) {
+    @media (min-width: $wHD) and (min-height: $hHD) {
       position: fixed;
       top: 0%;
       left: 0%;
@@ -189,7 +189,6 @@
   input:focus {
     outline: 0;
     outline-style: 100;
-    
   }
 
   .input-button {
